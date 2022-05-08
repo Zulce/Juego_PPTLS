@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/mezclilla"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:background="@color/mezclilla">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"  />
+
+    <TextView
+        android:id="@+id/textcpu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:text="CPU"
+        android:textSize="15dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:paddingLeft="70dp"
+        android:paddingTop="3dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llJ2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:background="@color/amarillo_arena"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textcontador_J2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:layout_margin="5dp"
+            android:text="0"
+            android:textSize="40dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="60dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageJ2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+            android:padding="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llJ1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:background="@color/amarillo_arena"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textcontador_J1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:layout_margin="5dp"
+            android:text="0"
+            android:textSize="40dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="60dp" />
+
+        <ImageView
+            android:id="@+id/imageJ1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+            android:padding="20dp" />
+
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/lytable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:visibility="invisible"
+        >
+
+        <TableRow>
+            <ImageButton
+                android:id="@+id/btijeras"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:backgroundTint="@color/mezclilla"
+                android:onClick="tijeras_press"
+                android:src="@drawable/tijeras"
+
+                android:text="Tijeras"
+                android:visibility="visible"
+                android:layout_marginLeft="10dp">
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/bpapel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:backgroundTint="@color/mezclilla"
+                android:onClick="papel_press"
+                android:src="@drawable/papel"
+                android:text="Papel"
+                android:visibility="visible"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/bpiedra"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/mezclilla"
+            android:onClick="piedra_press"
+            android:text="Piedra"
+            android:src="@drawable/piedra"
+            android:visibility="visible"
+            android:layout_marginRight="10dp"></ImageButton>
+</TableRow>
+
+        <TableRow>
+        <ImageButton
+            android:id="@+id/blagarto"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Lagarto"
+            android:src="@drawable/lagarto"
+            android:backgroundTint="@color/mezclilla"
+            android:visibility="visible"
+            android:onClick="lagarto_press"
+            android:layout_marginLeft="50dp">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/bspock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Spock"
+            android:src="@drawable/spock"
+            android:backgroundTint="@color/mezclilla"
+            android:visibility="visible"
+            android:onClick="spock_press"
+            android:layout_marginRight="40dp">
+
+        </ImageButton>
+        </TableRow>
+
+
+    </TableLayout>
+    <Button
+        android:id="@+id/binicio"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_weight="0.5"
+        android:text="Comenzar"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/amarillo_claro"
+        android:visibility="visible"
+        android:onClick="inicio_press">
+    </Button>
+
+</LinearLayout>
+
